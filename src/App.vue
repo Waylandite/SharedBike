@@ -11,6 +11,7 @@ import TheWelcome from './components/TheWelcome.vue'
     </div>
   </header>
 
+
   <main>
     <TheWelcome />
   </main>
