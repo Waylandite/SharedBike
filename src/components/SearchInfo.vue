@@ -12,11 +12,11 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>Documentation</template>
+    <template #heading>研究区域</template>
 
     Vue’s
     <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+    深圳市，简称“深”，别称鹏城，广东省辖地级市，副省级市，国家计划单列市，超大城市，国务院批复确定的中国经济特区、全国性经济中心城市和国际化城市、 [1]  截至2022年，全市下辖9个区 [257]  ，总面积1997.47平方千米 [2]  ，常住人口1768.16万人
   </WelcomeItem>
 
   <WelcomeItem>
