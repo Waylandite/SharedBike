@@ -82,7 +82,6 @@
           method:"post",
           url:"https://www.baidu.com",
           data:{
-  
           }
         }).then(res => {
           this.obj= res.data[0];

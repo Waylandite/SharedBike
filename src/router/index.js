@@ -3,8 +3,8 @@ import {createMemoryHistory, createRouter, createWebHashHistory, createWebHistor
 /* 引入首页 路由 */
 
 const Router = createRouter({
-    history: createWebHashHistory(),
-    // history: createWebHistory(),
+    // history: createWebHashHistory(),
+    history: createWebHistory(),
     routes:[
         {
             path: '/',
@@ -16,22 +16,23 @@ const Router = createRouter({
         name:'searchInfo',
         component:()=>import('@/components/searchInfo/SearchInfo.vue'),
         children:[{
-                path:'/searchLocation',
+                path:'Location',
                 component:()=>import('@/components/searchInfo/SearchLocation.vue'),
             }
             ,{
-                path:'/searchMethod',
-                component:()=>import('@/components/searchInfo/SearchMethod.vue'),
+                path:'Content',
+                component:()=>import('@/components/searchInfo/SearchContent.vue'),
+            }
+            ,{
+                path:'Source',
+                component:()=>import('@/components/searchInfo/SearchSource.vue'),
+            }
+            ,{
+                path:'Step',
+                component:()=>import('@/components/searchInfo/SearchSteps.vue'),
             },
-            {
-                path:'/searchTools',
-                component:()=>import('@/components/searchInfo/SearchTools.vue'),
-            },
-            {   path:'/searchPeople',
+            {   path:'People',
                 component:()=>import('@/components/searchInfo/SearchPeople.vue'),
-            },
-            {   path:'/searchHistory',
-            component:()=>import('@/components/searchInfo/SearchHistory.vue'),
             }]
         },
     {
@@ -47,11 +48,6 @@ const Router = createRouter({
         path:'/location',
         name:'location',
         component:import("@/components/Location.vue")
-    }
-    ,{
-        path:'/dispatch',
-        name:'dispatch',
-        component:import("@/components/Dispatch.vue")
     }
     ]
 

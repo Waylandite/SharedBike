@@ -1,23 +1,23 @@
 <template>
     <el-row class="tac">
-    <el-col :span="3">
-      <h5 class="mb-2">研究内容介绍</h5>
+    <el-col :span="2">
       <el-menu
-        default-active="2"
+        default-active="1"
         class="el-menu-vertical-demo"
         @select="handleSelect"
+        style="margin-top: 10%; position: fixed; "
       >
       <el-menu-item index="1">
           <el-icon><Location /></el-icon>
           <span>研究区域</span>
         </el-menu-item>
         <el-menu-item index="2">
-          <el-icon><SwitchFilled /></el-icon>
-          <span>研究方法</span>
-        </el-menu-item>
-        <el-menu-item index="3" >
           <el-icon><Document /></el-icon>
-          <span>研究工具</span>
+          <span>研究内容</span>
+        </el-menu-item>
+        <el-menu-item index="3">
+          <el-icon><Place /></el-icon>
+          <span>数据来源</span>
         </el-menu-item>
         <el-menu-item index="4">
           <el-icon><Timer /></el-icon>
@@ -28,8 +28,10 @@
           <span>研究人员</span>
         </el-menu-item>
       </el-menu>
+
     </el-col>
-    <el-col :span="21">
+
+    <el-col :span="22">
     <RouterView></RouterView>
     </el-col>
   </el-row>
@@ -41,9 +43,11 @@ import {useRouter} from 'vue-router';
 import {
   Document,
   Location,
-  SwitchFilled,
+  Finished,
   User,
   Timer,
+    Place,
+
 } from '@element-plus/icons-vue'
 const router = useRouter();
 
@@ -52,19 +56,22 @@ const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
   if(key=="1"){
 
-    router.push('/searchLocation')
+    router.push('/searchInfo/Location')
   }
   else   if(key=="2"){
-    router.push('/searchMethod')
+    router.push('/searchInfo/Content')
   }
   else   if(key=="3"){
-    router.push('/searchTools')
+    router.push('/searchInfo/Source')
   }
   else   if(key=="4"){
-    router.push('/searchHistory')
+    router.push('/searchInfo/Step')
+  }
+  else if (key=="5"){
+    router.push('/searchInfo/People')
   }
   else{
-    router.push('/searchPeople')
+
   }
 
 }
