@@ -9,13 +9,14 @@ const Router = createRouter({
         {
             path: '/',
             name: 'Home',
-            redirect: '/searchInfo',
+            redirect: '/searchInfo/Location',
          },
         {
         path:'/searchInfo',
         name:'searchInfo',
         component:()=>import('@/components/searchInfo/SearchInfo.vue'),
-        children:[{
+        children:[
+            {
                 path:'Location',
                 component:()=>import('@/components/searchInfo/SearchLocation.vue'),
             }
@@ -38,8 +39,27 @@ const Router = createRouter({
     {
         path:'/cycleRule',
         name:'cycleRule',
-        component:import('@/components/CycleRule.vue')
-    },{
+        component:import('@/components/cycleRule/CycleRule.vue'),
+        children:[
+            {
+                path:'Usage',
+                component:import('@/components/cycleRule/CycleUsage.vue')
+            },
+            {
+                path: "Duration",
+                component: import("@/components/cycleRule/CycleDuration.vue")
+            },
+            {
+                path: "Distance",
+                component: import("@/components/cycleRule/CycleDistance.vue")
+            },
+            {
+                path: "Location",
+                component: import("@/components/cycleRule/CycleLocation.vue")
+            }
+            ]
+    },
+        {
         path:'/forecast',
         name:'forecast',
         component:import("@/components/Forecast.vue")

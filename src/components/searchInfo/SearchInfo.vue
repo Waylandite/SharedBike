@@ -52,8 +52,7 @@ import {
 const router = useRouter();
 
 const handleSelect = (key: string, keyPath: string[]) => {
-  console.log("点击了")
-  console.log(key, keyPath)
+
   if(key=="1"){
 
     router.push('/searchInfo/Location')

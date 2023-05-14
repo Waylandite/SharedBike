@@ -36,7 +36,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
     router.push('/searchInfo/Location')
   }
   else   if(key=="2"){
-    router.push('/cycleRule')
+    router.push('/CycleRule/Usage')
   }
   else   if(key=="3"){
     router.push('/location')
