@@ -6,30 +6,30 @@ const Router = createRouter({
     history: createWebHistory(),
     routes:[
         {
-            path: '/',
+            path: '',
             name: 'Home',
-            redirect: '/searchInfo/Location',
-         },
+            redirect: '/searchLocation',
+        },
         {
             component:()=>import('@/components/searchInfo/SearchInfo.vue'),
             children:[
             {
-                path:'/searchInfo/Location',
+                path:'/searchLocation',
                 component:()=>import('@/components/searchInfo/SearchLocation.vue'),
             }
             ,{
-                path:'/searchInfo/Content',
+                path:'/searchContent',
                 component:()=>import('@/components/searchInfo/SearchContent.vue'),
             }
             ,{
-                path:'/searchInfo/Source',
+                path:'/searchSource',
                 component:()=>import('@/components/searchInfo/SearchSource.vue'),
             }
             ,{
-                path:'/searchInfo/Step',
+                path:'/searchStep',
                 component:()=>import('@/components/searchInfo/SearchSteps.vue'),
             },
-            {   path:'/searchInfo/People',
+            {   path:'/searchPeople',
                 component:()=>import('@/components/searchInfo/SearchPeople.vue'),
             }]
         },
@@ -63,6 +63,10 @@ const Router = createRouter({
         path:'/forecast',
         name:'forecast',
         component:()=>import("@/components/Forecast.vue")
+        },
+        {
+            path: '/*',
+            redirect: '/searchInfo/Location'
         }
     ]
 

@@ -55,19 +55,19 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
   if(key=="1"){
 
-    router.push('/searchInfo/Location')
+    router.push('/searchLocation')
   }
   else   if(key=="2"){
-    router.push('/searchInfo/Content')
+    router.push('/searchContent')
   }
   else   if(key=="3"){
-    router.push('/searchInfo/Source')
+    router.push('/searchSource')
   }
   else   if(key=="4"){
-    router.push('/searchInfo/Step')
+    router.push('/searchStep')
   }
   else if (key=="5"){
-    router.push('/searchInfo/People')
+    router.push('/searchPeople')
   }
   else{
 
