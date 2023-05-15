@@ -55,15 +55,36 @@ const Router = createRouter({
                 ]
         },
         {
+            component:()=>import("@/components/foreCast/Forecast.vue"),
+            children:[
+                {
+                    path: '/forecast/intro',
+                    component:()=>import("@/components/foreCast/ForeIntro.vue")
+                },
+                {
+                    path: '/forecast/learn',
+                    component:()=>import("@/components/foreCast/ForeLearn.vue")
+                },
+                {
+                    path: '/forecast/step',
+                    component:()=>import("@/components/foreCast/ForeStep.vue")
+                },
+                {
+                    path: '/forecast/epoch',
+                    component:()=>import("@/components/foreCast/ForeEpoch.vue")
+                },
+                {
+                    path: '/forecast/outcome',
+                    component:()=>import("@/components/foreCast/ForeOutcome.vue")
+                }
+            ]
+        },
+        {
             path:'/location',
             name:'location',
             component:()=>import("@/components/Location.vue"),
         },
-        {
-        path:'/forecast',
-        name:'forecast',
-        component:()=>import("@/components/Forecast.vue")
-        },
+
         {
             path: '/*',
             redirect: '/searchInfo/Location'

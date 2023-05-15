@@ -49,7 +49,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
     router.push('/location')
   }
   else   if(key=="4"){
-    router.push('/forecast')
+    router.push('/forecast/Intro')
   }
   else{
 
