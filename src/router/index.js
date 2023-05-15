@@ -3,9 +3,7 @@ import {createMemoryHistory, createRouter, createWebHashHistory, createWebHistor
 /* 引入首页 路由 */
 
 const Router = createRouter({
-    // history: createWebHashHistory(),
     history: createWebHistory(),
-    // history: createWebHistory(import.meta.env.BASE_URL),
     routes:[
         {
             path: '/',
@@ -13,10 +11,10 @@ const Router = createRouter({
             redirect: '/searchInfo/Location',
          },
         {
-        path:'/searchInfo',
-        name:'searchInfo',
-        component:()=>import('@/components/searchInfo/SearchInfo.vue'),
-        children:[
+            path:'/searchInfo',
+            component:()=>import('@/components/searchInfo/SearchInfo.vue'),
+            redirect: '/searchInfo/Location',
+            children:[
             {
                 path:'Location',
                 component:()=>import('@/components/searchInfo/SearchLocation.vue'),
@@ -37,29 +35,29 @@ const Router = createRouter({
                 component:()=>import('@/components/searchInfo/SearchPeople.vue'),
             }]
         },
-    {
-        path:'/cycleRule',
-        name:'cycleRule',
-        component:()=>import('@/components/cycleRule/CycleRule.vue'),
-        children:[
-            {
-                path:'Usage',
-                component:()=>import('@/components/cycleRule/CycleUsage.vue')
-            },
-            {
-                path: "Duration",
-                component: ()=>import("@/components/cycleRule/CycleDuration.vue")
-            },
-            {
-                path: "Distance",
-                component: ()=>import("@/components/cycleRule/CycleDistance.vue")
-            },
-            {
-                path: "Location",
-                component:()=> import("@/components/cycleRule/CycleLocation.vue")
-            }
-            ]
-    },
+        {
+            path:'/cycleRule',
+            component:()=>import('@/components/cycleRule/CycleRule.vue'),
+            redirect: '/cycleRule/Usage',
+            children:[
+                {
+                    path:'Usage',
+                    component:()=>import('@/components/cycleRule/CycleUsage.vue')
+                },
+                {
+                    path: "Duration",
+                    component: ()=>import("@/components/cycleRule/CycleDuration.vue")
+                },
+                {
+                    path: "Distance",
+                    component: ()=>import("@/components/cycleRule/CycleDistance.vue")
+                },
+                {
+                    path: "Location",
+                    component:()=> import("@/components/cycleRule/CycleLocation.vue")
+                }
+                ]
+        },
         {
             path:'/location',
             name:'location',
@@ -69,8 +67,7 @@ const Router = createRouter({
         path:'/forecast',
         name:'forecast',
         component:()=>import("@/components/Forecast.vue")
-    }
-
+        }
     ]
 
 })
