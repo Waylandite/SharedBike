@@ -11,49 +11,45 @@ const Router = createRouter({
             redirect: '/searchInfo/Location',
          },
         {
-            path:'/searchInfo',
             component:()=>import('@/components/searchInfo/SearchInfo.vue'),
-            redirect: '/searchInfo/Location',
             children:[
             {
-                path:'Location',
+                path:'/searchInfo/Location',
                 component:()=>import('@/components/searchInfo/SearchLocation.vue'),
             }
             ,{
-                path:'Content',
+                path:'/searchInfo/Content',
                 component:()=>import('@/components/searchInfo/SearchContent.vue'),
             }
             ,{
-                path:'Source',
+                path:'/searchInfo/Source',
                 component:()=>import('@/components/searchInfo/SearchSource.vue'),
             }
             ,{
-                path:'Step',
+                path:'/searchInfo/Step',
                 component:()=>import('@/components/searchInfo/SearchSteps.vue'),
             },
-            {   path:'People',
+            {   path:'/searchInfo/People',
                 component:()=>import('@/components/searchInfo/SearchPeople.vue'),
             }]
         },
         {
-            path:'/cycleRule',
             component:()=>import('@/components/cycleRule/CycleRule.vue'),
-            redirect: '/cycleRule/Usage',
             children:[
                 {
-                    path:'Usage',
+                    path:'/cycleRule/Usage',
                     component:()=>import('@/components/cycleRule/CycleUsage.vue')
                 },
                 {
-                    path: "Duration",
+                    path: "/cycleRule/Duration",
                     component: ()=>import("@/components/cycleRule/CycleDuration.vue")
                 },
                 {
-                    path: "Distance",
+                    path: "/cycleRule/Distance",
                     component: ()=>import("@/components/cycleRule/CycleDistance.vue")
                 },
                 {
-                    path: "Location",
+                    path: "/cycleRule/Location",
                     component:()=> import("@/components/cycleRule/CycleLocation.vue")
                 }
                 ]
