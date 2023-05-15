@@ -4,7 +4,8 @@ import {createMemoryHistory, createRouter, createWebHashHistory, createWebHistor
 
 const Router = createRouter({
     // history: createWebHashHistory(),
-    history: createWebHistory(),
+    // history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes:[
         {
             path: '/',

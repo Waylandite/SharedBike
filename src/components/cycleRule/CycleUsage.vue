@@ -67,7 +67,7 @@
 <script>
 import { Chart } from '@antv/g2';
 import {onMounted} from "vue";
-import {Bar} from "@antv/g2plot";
+
 export default {
   name: "CycleUsage",
   setup(){
