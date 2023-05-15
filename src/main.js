@@ -11,11 +11,11 @@ import router from './router/index'
 
 import axios from "axios";
 
-router.afterEach((to,from,next) => {
-    window.scrollTo(0,0);
-    // 或
-    // window.scroll(0, 0);
-});
+// router.afterEach((to,from,next) => {
+//     window.scrollTo(0,0);
+//     // 或
+//     // window.scroll(0, 0);
+// });
 
 // axios.defaults.baseURL = '/api'//在所有请求前填加前缀
 

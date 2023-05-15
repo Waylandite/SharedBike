@@ -4,8 +4,8 @@ import {createMemoryHistory, createRouter, createWebHashHistory, createWebHistor
 
 const Router = createRouter({
     // history: createWebHashHistory(),
-    // history: createWebHistory(),
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHistory(),
+    // history: createWebHistory(import.meta.env.BASE_URL),
     routes:[
         {
             path: '/',
@@ -40,36 +40,37 @@ const Router = createRouter({
     {
         path:'/cycleRule',
         name:'cycleRule',
-        component:import('@/components/cycleRule/CycleRule.vue'),
+        component:()=>import('@/components/cycleRule/CycleRule.vue'),
         children:[
             {
                 path:'Usage',
-                component:import('@/components/cycleRule/CycleUsage.vue')
+                component:()=>import('@/components/cycleRule/CycleUsage.vue')
             },
             {
                 path: "Duration",
-                component: import("@/components/cycleRule/CycleDuration.vue")
+                component: ()=>import("@/components/cycleRule/CycleDuration.vue")
             },
             {
                 path: "Distance",
-                component: import("@/components/cycleRule/CycleDistance.vue")
+                component: ()=>import("@/components/cycleRule/CycleDistance.vue")
             },
             {
                 path: "Location",
-                component: import("@/components/cycleRule/CycleLocation.vue")
+                component:()=> import("@/components/cycleRule/CycleLocation.vue")
             }
             ]
     },
         {
+            path:'/location',
+            name:'location',
+            component:()=>import("@/components/Location.vue"),
+        },
+        {
         path:'/forecast',
         name:'forecast',
-        component:import("@/components/Forecast.vue")
+        component:()=>import("@/components/Forecast.vue")
     }
-    ,{
-        path:'/location',
-        name:'location',
-        component:import("@/components/Location.vue")
-    }
+
     ]
 
 })
