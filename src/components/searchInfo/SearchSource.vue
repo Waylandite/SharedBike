@@ -14,7 +14,7 @@
 
       <el-image
         style="width: 100%; border-radius: 20px;"
-        :src="picture1"
+        src="http://43.137.46.85:82/file/sharedbike/深圳市政府数据开放平台.png"
         fit="contain"/>
       <el-divider />
       <el-row >
@@ -30,7 +30,7 @@
           </el-link>
           <el-image
               style="width: 100%; border-radius: 20px;"
-              :src="picture2"
+              src="http://43.137.46.85:82/file/sharedbike/单车元数据.png"
               fit="contain"/>
 
         </el-card>
@@ -48,7 +48,7 @@
         </el-link>
         <el-image
             style="width: 100%; border-radius: 20px;"
-            :src="picture3"
+            src="http://43.137.46.85:82/file/sharedbike/地铁站点.png"
             fit="contain"/>
       </el-card>
     </el-col>
@@ -68,7 +68,7 @@
 
       <el-image
           style="width: 100%; border-radius: 20px;"
-          :src="picture4"
+          src="http://43.137.46.85:82/file/sharedbike/城市之光.png"
           fit="contain"/>
       <el-divider />
       <el-row >
@@ -84,7 +84,7 @@
             </el-link>
             <el-image
                 style="width: 100%; border-radius: 20px;"
-                :src="picture5"
+                src="http://43.137.46.85:82/file/sharedbike/公共交通.png"
                 fit="contain"/>
 
           </el-card>
@@ -102,7 +102,7 @@
             </el-link>
             <el-image
                 style="width: 100%; height: 310px; border-radius: 20px;"
-                :src="picture6"
+                src="http://43.137.46.85:82/file/sharedbike/地块.png"
                 fit="contain"/>
           </el-card>
         </el-col>
@@ -122,22 +122,12 @@
 </template>
 
 <script>
-import picture1 from '@/assets/深圳市政府数据开放平台.png'
-import picture2 from '@/assets/单车元数据.png'
-import picture3 from '@/assets/地铁站点.png'
-import picture4 from '@/assets/城市之光.png'
-import picture5 from '@/assets/公共交通.png'
-import picture6 from '@/assets/地块.png'
+
 export default {
   name: "SearchSource",
   data() {
     return {
-      picture1: picture1,
-      picture2: picture2,
-      picture3: picture3,
-      picture4: picture4,
-      picture5: picture5,
-      picture6: picture6,
+
     }
   }
 }

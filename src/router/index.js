@@ -62,10 +62,6 @@ const Router = createRouter({
                     component:()=>import("@/components/foreCast/ForeIntro.vue")
                 },
                 {
-                    path: '/forecast/learn',
-                    component:()=>import("@/components/foreCast/ForeLearn.vue")
-                },
-                {
                     path: '/forecast/step',
                     component:()=>import("@/components/foreCast/ForeStep.vue")
                 },
@@ -82,7 +78,25 @@ const Router = createRouter({
         {
             path:'/location',
             name:'location',
-            component:()=>import("@/components/Location.vue"),
+            component:()=>import("@/components/Location/Location.vue"),
+            children:[
+                {
+                    path:'/locationInfo',
+                    component:()=>import("@/components/Location/LocationInfo.vue")
+                },
+                {
+                    path:'/locationResult',
+                    component:()=>import("@/components/Location/LocationResult.vue")
+                },
+                {
+                    path: '/locationSubway',
+                    component:()=>import("@/components/Location/LocationSubway.vue")
+                },
+                {
+                    path: '/locationBus',
+                    component:()=>import("@/components/Location/LocationBus.vue")
+                }
+                ]
         },
 
         {

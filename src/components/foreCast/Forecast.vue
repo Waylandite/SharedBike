@@ -11,10 +11,6 @@
           <el-icon><Location /></el-icon>
           <span>CNN介绍</span>
         </el-menu-item>
-        <el-menu-item index="2">
-          <el-icon><Document /></el-icon>
-          <span>学习率</span>
-        </el-menu-item>
         <el-menu-item index="3">
           <el-icon><Place /></el-icon>
           <span>时序步长</span>
@@ -56,9 +52,6 @@ const handleSelect = (key: string, keyPath: string[]) => {
   if(key=="1"){
 
     router.push('/forecast/Intro')
-  }
-  else   if(key=="2"){
-    router.push('/forecast/learn')
   }
   else   if(key=="3"){
     router.push('/forecast/step')

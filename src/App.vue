@@ -2,8 +2,8 @@
 
 <template>
   <div class="common-layout">
-    <el-container>
-      <el-header>
+<!--    <el-container>-->
+<!--      <el-header>-->
         <el-affix>
           <el-menu
               :default-active="activeIndex"
@@ -21,11 +21,11 @@
 
           </el-menu>
         </el-affix>
-      </el-header>
-      <el-main>
+<!--      </el-header>-->
+<!--      <el-main >-->
         <router-view></router-view>
-      </el-main>
-    </el-container>
+<!--      </el-main>-->
+<!--    </el-container>-->
   </div>
 
 
@@ -46,7 +46,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
     router.push('/CycleRule/Usage')
   }
   else   if(key=="3"){
-    router.push('/location')
+    router.push('/locationInfo')
   }
   else   if(key=="4"){
     router.push('/forecast/Intro')

@@ -56,7 +56,7 @@
               <el-col :span="8">
                 <el-avatar
                     style="width: 100px; height: 100px; margin: 10px;"
-                    :src="picture"
+                    src="http://43.137.46.85:82/file/sharedbike/自拍.jpg"
                     fit="fill"/>
               </el-col>
               <el-col :span="16" >
@@ -140,7 +140,7 @@
 </template>
 
 <script>
-import picture from '@/assets/自拍.jpg'
+
 export default {
   name: 'About',
   data() {

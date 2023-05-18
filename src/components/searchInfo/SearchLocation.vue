@@ -14,7 +14,7 @@
   <el-col :span="1"/>
     <el-col :span="14" style="height: 100%;">
       <el-card style="border-radius: 20px; ">
-      <el-image style="margin-top: 5%;margin-bottom: 5%;" :src=shenzhen fit="cover" />
+      <el-image style="margin-top: 5%;margin-bottom: 5%;" src="http://43.137.46.85:82/file/sharedbike/shenzhen.jpg" fit="cover" />
       </el-card>
     </el-col>
   <el-col :span="1"/>
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import shenzhen from '../../assets/shenzhen.jpg';
+
 import {onMounted} from "vue";
 import axios from "axios";
 import mapboxgl from "mapbox-gl";

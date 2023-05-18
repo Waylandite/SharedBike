@@ -46,15 +46,9 @@
           <p>建立CNN需求预测模型</p>
         </el-card>
       </el-timeline-item>
-      <el-timeline-item  center timestamp="2023/2/6" placement="top">
+      <el-timeline-item  center timestamp="2023/3/6" placement="top">
         <el-card>
           <h4>建立投放点选址模型</h4>
-          <p>建立投放模型，多次测试评估合理性。完成论文的主要研究内容。</p>
-        </el-card>
-      </el-timeline-item>
-      <el-timeline-item  center timestamp="2023/4/6" placement="top">
-        <el-card>
-          <h4>求解调度策略</h4>
           <p>建立投放模型，多次测试评估合理性。完成论文的主要研究内容。</p>
         </el-card>
       </el-timeline-item>

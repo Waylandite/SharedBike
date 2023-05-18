@@ -1,8 +1,8 @@
 <template>
   <el-row>
     <el-col :span="1"/>
-    <el-col :span="23">
-      <el-card style="border-radius: 20px;height: 100%;">
+    <el-col :span="23" >
+      <el-card style="margin-top: 150px; border-radius: 20px;height: 400px;">
         <el-row>
           <el-col :span="14" style="height: 100%;">
             <el-card style="border-radius: 20px; height: 350px;">
@@ -35,7 +35,9 @@
         </el-row>
 
       </el-card>
+
     </el-col>
+    <el-col :span="1"/>
 
   </el-row>
 </template>
