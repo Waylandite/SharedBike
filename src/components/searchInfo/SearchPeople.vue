@@ -145,7 +145,7 @@ export default {
   name: 'About',
   data() {
     return {
-      picture: picture
+
     }
   },
 
